@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docx.Hub | PDF to DOCX</title>
+    <meta name="theme-color" content="#e6ebf2" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Docx.Hub" />
+    <link rel="icon" href="../../public/icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../../public/icons/icon.svg" />
+    <link rel="manifest" href="../../manifest.webmanifest" />
+    <link rel="stylesheet" href="../styles/main.css" />
+  </head>
+  <body>
+    <nav class="top-nav neo-raised">
+      <a class="nav-brand" href="./home.html"><span class="brand-mark small neo-raised-sm">DH</span><span>Docx.Hub</span></a>
+      <div class="nav-links">
+        <a class="nav-link" href="./home.html">Home</a>
+        <a class="nav-link" href="./docx-to-pdf.html">DOCX to PDF</a>
+        <a class="nav-link active" href="./pdf-to-docx.html">PDF to DOCX</a>
+        <a class="nav-link" href="./image-compressor.html">Image</a>
+        <a class="nav-link" href="./pdf-compressor.html">PDF</a>
+        <a class="nav-link" href="./docx-compressor.html">DOCX</a>
+      </div>
+      <div class="nav-actions"><span id="nav-user" class="nav-user"></span><button id="logout-btn" class="btn-secondary neo-raised-sm" type="button">Logout</button></div>
+    </nav>
+    <main class="page">
+      <section class="page-header neo-raised">
+        <div>
+          <p class="eyebrow">Conversion Tool</p>
+          <h1>PDF to DOCX</h1>
+          <p class="lead">Extract text from a PDF and generate an editable DOCX file.</p>
+        </div>
+      </section>
+      <section class="tool-layout">
+        <article class="dash-card neo-raised">
+          <h2>1. Select PDF</h2>
+          <label class="dropzone neo-inset" for="tool-file">
+            <div class="drop-inner">
+              <div class="icon-badge neo-raised-sm">P→D</div>
+              <p><strong>Choose or drop a PDF</strong></p>
+              <p class="muted">.pdf files</p>
+            </div>
+            <input id="tool-file" type="file" accept="application/pdf,.pdf" hidden />
+          </label>
+          <div class="hero-actions">
+            <button id="process-btn" class="btn-primary neo-raised-sm" type="button">Convert to DOCX</button>
+            <a id="download-link" class="btn-secondary neo-raised-sm btn-link hidden" download>Download DOCX</a>
+          </div>
+          <p id="tool-status" class="muted" style="margin-top:0.75rem;"></p>
+        </article>
+        <article class="dash-card neo-raised">
+          <h2>Extracted Preview</h2>
+          <div id="result-info" class="result-box neo-inset muted">No file processed yet.</div>
+          <pre id="text-preview" class="doc-preview neo-inset hidden" style="margin-top:1rem; white-space:pre-wrap;"></pre>
+          <p class="muted" style="margin-top:0.75rem; font-size:0.9rem;">Note: Browser-based conversion extracts text content; complex layouts/images may not be fully preserved.</p>
+        </article>
+      </section>
+    </main>
+    <footer class="page-footer"><p>&copy; 2026 Docx.Hub.</p></footer>
+    <script src="../../public/libs/pdf.min.js"></script>
+    <script src="../../public/libs/docx.min.js"></script>
+    <script src="../scripts/main.js" data-page="app" data-login="../../index.html" data-sw="../../sw.js" data-sw-scope="../../" data-active="pdf-to-docx" data-tool="pdf-to-docx"></script>
+  </body>
+</html>

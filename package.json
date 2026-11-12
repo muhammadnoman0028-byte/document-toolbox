@@ -1,0 +1,23 @@
+{
+  "name": "docx-hub",
+  "version": "1.0.0",
+  "private": "true",
+  "description": "Docx.Hub website project",
+  "scripts": {
+    "start": "echo \"Add a dev server (e.g. vite, serve) and update this script.\"",
+    "build": "echo \"Add a build tool and update this script.\"",
+    "test": "echo \"No tests configured yet\""
+  },
+  "keywords": [
+    "documents",
+    "docx",
+    "web"
+  ],
+  "author": "muhammadnoman0028-byte",
+  "license": "MIT",
+  "devDependencies": {
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/cli": "^8.6.0",
+    "@capacitor/core": "^8.6.0"
+  }
+}

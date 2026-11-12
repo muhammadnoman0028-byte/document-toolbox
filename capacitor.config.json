@@ -1,0 +1,6 @@
+﻿{
+  "appId": "com.docxhub.app",
+  "appName": "Docx.Hub",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docx.Hub | Image Compressor</title>
+    <meta name="theme-color" content="#e6ebf2" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Docx.Hub" />
+    <link rel="icon" href="../../public/icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../../public/icons/icon.svg" />
+    <link rel="manifest" href="../../manifest.webmanifest" />
+    <link rel="stylesheet" href="../styles/main.css" />
+  </head>
+  <body>
+    <nav class="top-nav neo-raised">
+      <a class="nav-brand" href="./home.html"><span class="brand-mark small neo-raised-sm">DH</span><span>Docx.Hub</span></a>
+      <div class="nav-links">
+        <a class="nav-link" href="./home.html">Home</a>
+        <a class="nav-link" href="./docx-to-pdf.html">DOCX to PDF</a>
+        <a class="nav-link" href="./pdf-to-docx.html">PDF to DOCX</a>
+        <a class="nav-link active" href="./image-compressor.html">Image</a>
+        <a class="nav-link" href="./pdf-compressor.html">PDF</a>
+        <a class="nav-link" href="./docx-compressor.html">DOCX</a>
+      </div>
+      <div class="nav-actions"><span id="nav-user" class="nav-user"></span><button id="logout-btn" class="btn-secondary neo-raised-sm" type="button">Logout</button></div>
+    </nav>
+
+    <main class="page">
+      <section class="page-header neo-raised">
+        <div>
+          <p class="eyebrow">Compression Tool</p>
+          <h1>Image Compressor</h1>
+          <p class="lead">Compress JPG, PNG, or WEBP images in your browser and download the optimized file.</p>
+        </div>
+      </section>
+
+      <section class="tool-layout">
+        <article class="dash-card neo-raised">
+          <h2>1. Select Image</h2>
+          <label class="dropzone neo-inset" for="tool-file">
+            <div class="drop-inner">
+              <div class="icon-badge neo-raised-sm">IMG</div>
+              <p><strong>Choose or drop an image</strong></p>
+              <p class="muted">JPG, PNG, WEBP</p>
+            </div>
+            <input id="tool-file" type="file" accept="image/png,image/jpeg,image/webp" hidden />
+          </label>
+          <div class="tool-controls">
+            <label class="field">
+              <span>Quality: <strong id="quality-val">0.7</strong></span>
+              <div class="input-wrap neo-inset"><input id="quality" type="range" min="0.1" max="1" step="0.05" value="0.7" /></div>
+            </label>
+            <label class="field">
+              <span>Max width (px, optional)</span>
+              <div class="input-wrap neo-inset"><input id="max-width" type="number" min="1" placeholder="e.g. 1920" /></div>
+            </label>
+          </div>
+          <div class="hero-actions">
+            <button id="process-btn" class="btn-primary neo-raised-sm" type="button">Compress Image</button>
+            <a id="download-link" class="btn-secondary neo-raised-sm btn-link hidden" download>Download</a>
+          </div>
+          <p id="tool-status" class="muted" style="margin-top:0.75rem;"></p>
+        </article>
+
+        <article class="dash-card neo-raised">
+          <h2>Result</h2>
+          <div id="result-info" class="result-box neo-inset muted">No file processed yet.</div>
+          <div id="preview-wrap" class="preview-wrap neo-inset hidden" style="margin-top:1rem;">
+            <img id="preview-img" alt="Compressed preview" />
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="page-footer"><p>&copy; 2026 Docx.Hub.</p></footer>
+    <script src="../scripts/main.js" data-page="app" data-login="../../index.html" data-sw="../../sw.js" data-sw-scope="../../" data-active="image-compressor" data-tool="image-compressor"></script>
+  </body>
+</html>

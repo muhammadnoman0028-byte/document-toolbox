@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Docx.Hub</string>
+    <string name="title_activity_main">Docx.Hub</string>
+    <string name="package_name">com.docxhub.app</string>
+    <string name="custom_url_scheme">com.docxhub.app</string>
+</resources>

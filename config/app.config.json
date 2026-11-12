@@ -1,0 +1,12 @@
+{
+  "appName": "Docx.Hub",
+  "theme": "neomorphic",
+  "auth": {
+    "storageKey": "docxhub.auth",
+    "rememberKey": "docxhub.rememberedEmail"
+  },
+  "routes": {
+    "login": "index.html",
+    "home": "src/pages/home.html"
+  }
+}

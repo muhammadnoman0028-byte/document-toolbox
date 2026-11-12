@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+out/
+.cache/
+www/
+
+# Capacitor (generated/synced native artifacts)
+android/app/build/
+android/.gradle/
+android/build/
+android/local.properties
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+.cf.err
+.cf.log
+.tunnel.err
+.tunnel.log
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+
+# Coverage / test artifacts
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
